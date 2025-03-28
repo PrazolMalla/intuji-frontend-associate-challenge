@@ -1,0 +1,31 @@
+$font: (
+  "xxl": 28px,
+  "xl": 20px,
+  "l": 18px,
+  "m": 16px,
+  "s": 14px,
+  "xs": 12px,
+);
+
+$font-weights: (
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+);
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+@each $font-name, $font-size in $font {
+  .text-#{$font-name} {
+    font-size: $font-size;
+  }
+}
+
+@each $font-weight-name, $font-weight in $font-weights {
+  .font-#{$font-weight-name} {
+    font-weight: $font-weight;
+  }
+}
