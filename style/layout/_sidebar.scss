@@ -1,0 +1,54 @@
+.sidebar {
+  max-width: 280px;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  &__nav {
+    height: 100%;
+    @include flexbox(space-between, center, 0px, column);
+    padding: 35px 22px 32px 0px;
+    &-top {
+      @include flexbox(center, center, 32px, column);
+    }
+    &-item {
+      max-width: 256px;
+      width: 100%;
+      height: 64px;
+      padding: 20px 79px 20px 49px;
+    }
+    &-link {
+      @include flexbox(start, center, 16px);
+      &-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &-list {
+      width: 100%;
+    }
+    &-bottom {
+      width: 100%;
+    }
+  }
+  &__logo {
+    width: 178px;
+    height: 52px;
+    background-color: #d9d9d9;
+    @include flexbox(center, center, 0px);
+  }
+  @include respond(tab-port) {
+    left: 0px;
+  }
+}
+
+.hr-line {
+  height: 1px;
+  width: 219px;
+  opacity: 0.3;
+  background-color: $color-blue;
+}

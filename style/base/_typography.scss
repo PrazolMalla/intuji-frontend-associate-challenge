@@ -14,6 +14,12 @@ $font-weights: (
   "700": 700,
 );
 
+$colors: (
+  "white": #fff,
+  "blue-100": #0d163a,
+  "blue-60": rgba(13, 22, 58, 0.6),
+  "blue-50": rgba(13, 22, 58, 0.5),
+);
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -27,5 +33,11 @@ body {
 @each $font-weight-name, $font-weight in $font-weights {
   .font-#{$font-weight-name} {
     font-weight: $font-weight;
+  }
+}
+
+@each $color-name, $color-value in $colors {
+  .text-#{$color-name} {
+    color: $color-value;
   }
 }

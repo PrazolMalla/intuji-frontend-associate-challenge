@@ -10,10 +10,89 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
+  <script src="https://kit.fontawesome.com/6fd8a997cb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+  <button class="btn btn--open">
+    <i class="fa-solid fa-bars ham-icon text-xxl text-blue-100"></i>
+  </button>
+  <aside class="sidebar">
+    <button class="btn btn--close">
+      <i class="fa-solid fa-xmark close-icon text-xxl text-blue-100"></i>
+    </button>
+    <nav class="sidebar__nav">
+      <div class="sidebar__nav-top">
+        <div class="sidebar__logo">
+          <img src="./assets/img/gallery.svg" alt="Company Logo" class="sidebar__logo-icon">
+        </div>
+        <ul class="sidebar__nav-list ">
+          <li class="sidebar__nav-item ">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/element-4.svg" alt="Dashboard Icon" class=" sidebar__nav-link-icon">
+              Dashboard
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/Calendar.svg" alt="" class="sidebar__nav-link-icon">
+              Schedule
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/sms.svg" alt="" class="sidebar__nav-link-icon">
+              Message
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/Chart.svg" alt="" class="sidebar__nav-link-icon">
+              Analytics
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/profile-2user.svg" alt="" class="sidebar__nav-link-icon">
+              Team
+            </a>
+          </li>
+        </ul>
+        <div class="hr-line"></div>
+        <ul class="sidebar__nav-list">
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/user.svg" alt="" class="sidebar__nav-link-icon">
+              Profile
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/setting.svg" alt="" class="sidebar__nav-link-icon">
+              Setting
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__nav-bottom">
+        <ul class="sidebar__nav-list">
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/info-circle.svg" alt="" class="sidebar__nav-link-icon">
+              Help
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link font-400 text-m text-blue-100">
+              <img src="./assets/img/login.svg" alt="" class="sidebar__nav-link-icon">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
