@@ -1,0 +1,99 @@
+.overview {
+  &__section {
+    padding: 1rem;
+    background-color: $color-white;
+    border-radius: 14px;
+    width: 100%;
+    @include flexbox(start, start, 24px, column);
+    @include respond(tab-port) {
+      max-width: 717px;
+    }
+  }
+  &__items {
+    display: grid;
+
+    grid-auto-rows: auto;
+    gap: 18px;
+    @include respond(tab-port) {
+      grid-template-columns: auto auto;
+    }
+  }
+  &__body {
+    max-width: 333px;
+    height: 165.5px;
+    padding: 1.25rem;
+    border-radius: 14px;
+    border: 1px solid rgba(222, 222, 222, 0.7);
+    &:hover {
+      background-color: $color-blue;
+      color: white;
+
+      .overview__item-heading,
+      .overview__item-money {
+        color: white;
+      }
+      .overview__item-subtext p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .overview__item-divider {
+        background-color: #fff;
+      }
+      svg path {
+        stroke: white;
+      }
+    }
+  }
+  &__item {
+    height: 125px;
+    @include flexbox(start, start, 21px, column);
+    cursor: pointer;
+
+    &-top {
+      max-width: 293px;
+      height: 48px;
+      width: 100%;
+      @include flexbox(start, center, 9px);
+    }
+    &-icon-container {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+      @include flexbox(center, center);
+    }
+    &-text {
+      @include flexbox(center, start, 9px, column);
+    }
+    &-subtext {
+      @include flexbox(center, center, 4px, row);
+    }
+    &-divider {
+      min-height: 1px;
+      width: 293px;
+      opacity: 0.2;
+      background-color: $color-blue;
+    }
+    &-bottom {
+      width: 100%;
+      @include flexbox(space-between, center);
+    }
+  }
+  &__up-arrow {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    @include flexbox(center, center);
+  }
+}
+.color-green {
+  background-color: rgba($color-light-green, 0.4);
+}
+.color-blue {
+  background-color: rgba($color-light-blue, 0.4);
+}
+.color-yellow {
+  background-color: rgba($color-light-yellow, 0.4);
+}
+.color-pink {
+  background-color: rgba($color-pink, 0.4);
+}

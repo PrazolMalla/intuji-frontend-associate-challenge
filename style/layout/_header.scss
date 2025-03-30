@@ -48,7 +48,11 @@
     height: 64px;
     padding: 8px;
     background-color: $color-white;
-    @include flexbox(center, center, 10px, row);
+    @include flexbox(space-evenly, center, 10px, row);
+    @include respond(tab-port) {
+      justify-content: center;
+      margin-top: 0;
+    }
 
     @include respond(tab-port) {
       position: static;
