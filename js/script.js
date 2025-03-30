@@ -2,9 +2,9 @@ const openButton = document.querySelector(".btn--open");
 const closeButton = document.querySelector(".btn--close");
 const sidebar = document.querySelector(".sidebar");
 openButton.addEventListener("click", () => {
-  sidebar.style.left = "0";
+  sidebar.classList.add("sidebar-active");
 });
 
 closeButton.addEventListener("click", () => {
-  sidebar.style.left = "-1000px";
+  sidebar.classList.remove("sidebar-active");
 });
