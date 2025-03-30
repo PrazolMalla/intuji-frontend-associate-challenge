@@ -1,0 +1,15 @@
+.main {
+  flex: 1;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  transition: margin-left 0.3s ease-in-out;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  @include respond(tab-port) {
+    padding-top: 2rem;
+
+    margin-left: 280px;
+    padding-left: 32px;
+  }
+}

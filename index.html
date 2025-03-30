@@ -15,9 +15,7 @@
 
 <body>
   <!-- --------------------------------------------- Side Bar --------------------------------------------- -->
-  <button class="btn btn--open">
-    <i class="fa-solid fa-bars ham-icon text-xxl text-blue-100"></i>
-  </button>
+
   <aside class="sidebar">
     <button class="btn btn--close">
       <i class="fa-solid fa-xmark close-icon text-xxl text-blue-100"></i>
@@ -95,6 +93,41 @@
       </div>
     </nav>
   </aside>
+  <main class="main">
+    <!-- ----------------------------------- Header ------------------------------------------------------- -->
+    <header class="header">
+      <div class="header__left">
+        <button class="btn btn--open">
+          <i class="fa-solid fa-bars ham-icon text-xxl text-blue-100"></i>
+        </button>
+        <div class="header__search">
+          <img src="./assets/img/search-normal.svg" alt="" class="header__search-icon">
+          <input type="text" placeholder="Search here..." class="header__search-input text-m ">
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="header__action-box">
+          <img src="./assets/img/notification-bing.svg" alt="" class="header__action-icon">
+        </div>
+        <div class="header__action-box">
+          <img src="./assets/img/message-text.svg" alt="" class="header__action-icon">
+        </div>
+        <div class="header__profile">
+          <div class="header__profile-out-circle">
+            <div class="header__profile-in-circle">
+              <img src="./assets/img/gallery.svg" alt="" class="header__profile-pic">
+            </div>
+          </div>
+          <div class="header__profile-name">
+            Mirie Kiritani
+          </div>
+          <div class="header__dropdown">
+            <img src="./assets/img/arrow-down.svg" alt="" srcset="" class="header__dropdown-icon">
+          </div>
+        </div>
+      </div>
+    </header>
+  </main>
   <script src="./js/script.js"></script>
 </body>
 
