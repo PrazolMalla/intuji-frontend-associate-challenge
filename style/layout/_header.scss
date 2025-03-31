@@ -91,4 +91,7 @@
       @include flexbox(center, center);
     }
   }
+  &__dropdown {
+    @include flexbox(center, center);
+  }
 }
