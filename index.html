@@ -334,6 +334,53 @@
         </div>
 
       </section>
+      <!-- ----------------------------- Analytics Section --------------------------------------------------------------- -->
+      <section class="analytics__section">
+        <div class="analytics__heading">
+          <h1 class="text-xl text-100 font-700">
+            Analytics
+          </h1>
+          <div class="analytics__labels">
+            <div class="analytics__label">
+              <div class="analytics__mark bg-blue"></div>
+              <p class="font-500 text-blue-100 text-s ">Label 1</p>
+            </div>
+            <div class="analytics__label">
+              <div class="analytics__mark bg-yellow"></div>
+              <p class="font-500 text-blue-100 text-s">Label 2</p>
+            </div>
+            <select class="analytics__filter text-s">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+        </div>
+        <div class="analytics__body">
+          <div class="analytics__body-left">
+            <div class="analytics__label-y">
+              <p>20k</p>
+              <p>15k</p>
+              <p>10k</p>
+              <p>5k</p>
+              <p>1k</p>
+              <p>0k</p>
+            </div>
+          </div>
+          <div class="analytics__body-right">
+            <canvas id="analytics__chart"></canvas>
+            <div class="analytics__label-x">
+              <p>Sun</p>
+              <p>Mon</p>
+              <p>Tue</p>
+              <p>Wed</p>
+              <p>Thu</p>
+              <p>Fri</p>
+              <p>Sat</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       <!-- ----------------------Recent Transaction ---------------------------- -->
@@ -430,7 +477,80 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/script.js"></script>
+  <script>
+    const ctx = document.getElementById("analytics__chart").getContext("2d");
+    const gradientBlue = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientBlue.addColorStop(0, 'rgba(71, 69, 164, 0.1)');
+    gradientBlue.addColorStop(1, 'rgba(71, 69, 164, 0.1)');
+    const gradientYellow = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientYellow.addColorStop(0, 'rgba(248,205,112,0.1)');
+    gradientYellow.addColorStop(1, 'rgba(248,205,112,0.1)');
+    new Chart(ctx, {
+      type: "line",
 
+
+      data: {
+        labels: [
+          "Sunday", "Sunday",
+          "Monday", "Monday",
+          "Tuesday", "Tuesday",
+          "Wednesday", "Wednesday",
+          "Thursday", "Thursday",
+          "Friday", "Friday",
+          "Saturday", "Saturday"
+        ],
+
+        datasets: [{
+          data: [12, 9, 12, 7, 4, 6, 5, 14, 10, 6, 20, 7, 16, 10],
+          borderColor: "#6865E7",
+          borderWidth: 1,
+          fill: true,
+          tension: 0.4,
+          pointRadius: 0,
+          backgroundColor: gradientBlue
+        },
+        {
+          data: [3, 4, 7, 4, 4.8, 4.5, 3.9, 8, 2.5, 4, 4.2, 5.1, 4, 6,],
+          borderColor: "#F9BA33",
+          borderWidth: 1,
+          fill: true,
+          tension: 0.4,
+          pointRadius: 0,
+          backgroundColor: gradientYellow
+        }
+
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+        },
+        scales: {
+          x: { display: false },
+          y: {
+            grid: {
+              color: '#EBEBEB',
+              drawBorder: false,
+              drawOnChartArea: true,
+              drawTicks: false
+            },
+            border: {
+              dash: [20, 8],
+            },
+            ticks: {
+              display: false,
+            },
+            min: 0,
+            max: 20
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

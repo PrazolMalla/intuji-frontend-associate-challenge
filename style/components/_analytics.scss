@@ -1,0 +1,71 @@
+.analytics {
+  &__section {
+    @extend .overview__section;
+  }
+  &__heading {
+    width: 100%;
+    @include flexbox(space-between, center, 0px, column);
+    @include respond(phone) {
+      flex-direction: row;
+    }
+  }
+  &__labels {
+    @include flexbox(start, center, 8px);
+  }
+  &__label {
+    @include flexbox(start, center, 8px);
+  }
+  &__mark {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  &__filter {
+    background-color: transparent;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 8px;
+    color: #7c7c7c;
+  }
+  &__body {
+    width: 100%;
+    @include flexbox(start, center, 18px);
+    &-left {
+      height: 100%;
+    }
+    &-right {
+      width: 100%;
+      max-width: 300px;
+      @include flexbox(start, center, 16px, column);
+      @include respond(phone) {
+        max-width: 632px;
+      }
+    }
+  }
+  &__label-y {
+    @include flexbox(start, center, 20px, column);
+    color: #999;
+    font-size: 10px;
+    @include respond(phone) {
+      gap: 45px;
+    }
+  }
+  &__label-x {
+    @extend .analytics__label-y;
+    width: 100%;
+    gap: 28px;
+    flex-direction: row;
+    @include respond(phone) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.bg-blue {
+  background-color: $color-blue;
+}
+
+.bg-yellow {
+  background-color: $color-yellow;
+}
