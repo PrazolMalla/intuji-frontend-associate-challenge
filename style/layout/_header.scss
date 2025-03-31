@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin: 0 1rem;
+
   @include respond(tab-port) {
     flex-direction: row;
     gap: 24px;
@@ -42,6 +44,7 @@
   }
   &__right {
     position: fixed;
+    margin: 0 -1rem;
     bottom: 0px;
     z-index: 10;
     width: 100%;
@@ -51,7 +54,7 @@
     @include flexbox(space-evenly, center, 10px, row);
     @include respond(tab-port) {
       justify-content: center;
-      margin-top: 0;
+      margin: 0;
     }
 
     @include respond(tab-port) {

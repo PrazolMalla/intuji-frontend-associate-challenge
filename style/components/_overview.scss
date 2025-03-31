@@ -14,7 +14,7 @@
 
     grid-auto-rows: auto;
     gap: 18px;
-    @include respond(tab-port) {
+    @include respond(phone) {
       grid-template-columns: auto auto;
     }
   }

@@ -1,0 +1,87 @@
+.savings {
+  &__section {
+    width: 100%;
+    max-width: 365px;
+    background-color: $color-white;
+    padding: 1rem;
+    @include flexbox(start, start, 24px, column);
+    border-radius: 14px;
+    @include respond(tab-port) {
+      max-width: 350px;
+    }
+  }
+  &__heading {
+    width: 100%;
+    @include flexbox(space-between, center);
+  }
+  &__divider {
+    min-height: 1px;
+    width: 317px;
+    opacity: 0.2;
+    background-color: $color-blue;
+  }
+  &__body {
+    @include flexbox(start, start, 16px, column);
+  }
+  &__item {
+    width: 100%;
+    @include flexbox(start, start, 14px, column);
+    padding: 8px;
+    &-text {
+      width: 100%;
+      @include flexbox(space-between, center);
+    }
+    &-main {
+      width: 100%;
+      @include flexbox(start, start, 12px, column);
+    }
+    &-money {
+      width: 100%;
+      @include flexbox(space-between, center);
+    }
+    &-progress-bar {
+      width: 300px;
+      position: relative;
+    }
+    &-neutral-bar {
+      width: 300px;
+      border-radius: 100px;
+      position: absolute;
+      height: 8px;
+      background-color: #dedede;
+      z-index: 1;
+    }
+    &-color-bar {
+      border-radius: 100px;
+      position: absolute;
+      height: 8px;
+      z-index: 9;
+    }
+  }
+}
+
+.link {
+  color: $color-blue;
+}
+
+.text-purple {
+  color: $color-blue;
+}
+.text-yellow {
+  color: $color-yellow;
+}
+
+.blue-bar {
+  width: 48%;
+  background-color: $color-blue;
+}
+
+.yellow-bar {
+  width: 79%;
+  background-color: $color-light-yellow;
+}
+
+.green-bar {
+  width: 32%;
+  background-color: $color-green;
+}

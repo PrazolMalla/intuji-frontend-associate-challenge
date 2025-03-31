@@ -1,4 +1,5 @@
 .main {
+  max-width: 1160px;
   flex: 1;
   min-height: 100vh;
   position: relative;
@@ -8,13 +9,20 @@
   padding-right: 0.5rem;
   @include respond(tab-port) {
     padding-top: 2rem;
-
     margin-left: 280px;
     padding-left: 32px;
   }
 }
 
 .main__container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 32px;
+  margin: 0 1rem;
   margin-top: 2rem;
   margin-bottom: 64px;
+
+  @include respond(tab-port) {
+    grid-template-columns: auto auto;
+  }
 }
