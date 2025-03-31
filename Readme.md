@@ -44,7 +44,7 @@ finance-app/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PrazolMalla/intuji-frontend-associate-challenge/blob/main/Readme.md
+   git clone https://github.com/PrazolMalla/intuji-frontend-associate-challenge
    ```
 2. Navigate to the project folder:
    ```bash
@@ -60,16 +60,6 @@ finance-app/
    ```
 5. Open `index.html` in your browser or use a live server extension.
 
-## Usage
 
-- Modify SCSS files to customize the UI.
-- Update `script.js` to add more interactive features.
-- Use `Chart.js` to customize graphs and analytics.
 
-## Contributing
-
-Feel free to fork this project and submit a pull request with improvements!
-
-## License
-
-This project is open-source and available under the MIT License.
+.
