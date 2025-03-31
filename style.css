@@ -90,7 +90,6 @@ body {
 }
 
 .main {
-  max-width: 1160px;
   flex: 1;
   min-height: 100vh;
   position: relative;
@@ -100,11 +99,22 @@ body {
   padding-right: 0.5rem;
   overflow-y: auto;
 }
+@media only screen and (min-width: 600px) {
+  .main {
+    grid-area: a;
+  }
+}
 @media only screen and (min-width: 900px) {
+  .main {
+    max-width: 1040px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .main {
     padding-top: 2rem;
     margin-left: 280px;
     padding-left: 32px;
+    max-width: 1160px;
   }
 }
 
@@ -116,9 +126,17 @@ body {
   margin-top: 2rem;
   margin-bottom: 64px;
 }
+@media only screen and (min-width: 600px) {
+  .main__container {
+    grid-template-areas: "a a" "d d" "b c";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+}
 @media only screen and (min-width: 900px) {
   .main__container {
-    grid-template-columns: auto auto;
+    grid-template-areas: "a b" "d c";
   }
 }
 
@@ -188,7 +206,7 @@ body {
   align-items: center;
   gap: 0px;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   .sidebar {
     left: 0px;
   }
@@ -357,7 +375,7 @@ body {
   width: 24px;
   margin: 1rem;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   .btn--open {
     display: none;
   }
@@ -368,7 +386,7 @@ body {
   top: 16px;
   right: 16px;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   .btn--close {
     display: none;
   }
@@ -378,6 +396,7 @@ body {
   padding: 1rem;
   background-color: #fff;
   border-radius: 14px;
+  max-width: 450px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -385,7 +404,13 @@ body {
   align-items: start;
   gap: 24px;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
+  .overview__section, .analytics__section {
+    max-width: 650px;
+    grid-area: a;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .overview__section, .analytics__section {
     max-width: 717px;
   }
@@ -470,9 +495,14 @@ body {
 }
 .overview__item-divider {
   min-height: 1px;
-  width: 293px;
+  width: 255px;
   opacity: 0.2;
   background-color: #4745a4;
+}
+@media only screen and (min-width: 1200px) {
+  .overview__item-divider {
+    width: 293px;
+  }
 }
 .overview__item-bottom {
   width: 100%;
@@ -511,7 +541,7 @@ body {
 
 .savings__section, .transaction__section {
   width: 100%;
-  max-width: 365px;
+  max-width: 355px;
   background-color: #fff;
   padding: 1rem;
   display: flex;
@@ -524,6 +554,11 @@ body {
 @media only screen and (min-width: 900px) {
   .savings__section, .transaction__section {
     max-width: 350px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .savings__section, .transaction__section {
+    grid-area: b;
   }
 }
 .savings__heading, .transaction__heading {
@@ -630,11 +665,17 @@ body {
   background-color: #3bbb6e;
 }
 
+@media only screen and (min-width: 600px) {
+  .transaction__section {
+    grid-area: c;
+  }
+}
 .transaction__body {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: start;
   gap: 25px;
 }
@@ -664,7 +705,31 @@ body {
   align-items: center;
   gap: 8px;
 }
+.transaction__item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 4px;
+}
+.transaction__item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 4px;
+}
 
+@media only screen and (min-width: 600px) {
+  .analytics__section {
+    grid-area: d;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .analytics__section {
+    grid-area: d;
+  }
+}
 .analytics__heading {
   width: 100%;
   display: flex;
@@ -725,6 +790,11 @@ body {
   gap: 16px;
 }
 @media only screen and (min-width: 600px) {
+  .analytics__body-right {
+    max-width: 575px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .analytics__body-right {
     max-width: 632px;
   }

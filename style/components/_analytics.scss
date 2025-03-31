@@ -1,6 +1,12 @@
 .analytics {
   &__section {
     @extend .overview__section;
+    @include respond(phone) {
+      grid-area: d;
+    }
+    @include respond(tab-land) {
+      grid-area: d;
+    }
   }
   &__heading {
     width: 100%;
@@ -39,6 +45,9 @@
       max-width: 300px;
       @include flexbox(start, center, 16px, column);
       @include respond(phone) {
+        max-width: 575px;
+      }
+      @include respond(tab-land) {
         max-width: 632px;
       }
     }

@@ -1,5 +1,4 @@
 .main {
-  max-width: 1160px;
   flex: 1;
   min-height: 100vh;
   position: relative;
@@ -8,10 +7,18 @@
   padding-top: 0.5rem;
   padding-right: 0.5rem;
   overflow-y: auto;
+
+  @include respond(phone) {
+    grid-area: a;
+  }
   @include respond(tab-port) {
+    max-width: 1040px;
+  }
+  @include respond(tab-land) {
     padding-top: 2rem;
     margin-left: 280px;
     padding-left: 32px;
+    max-width: 1160px;
   }
 }
 
@@ -23,7 +30,18 @@
   margin-top: 2rem;
   margin-bottom: 64px;
 
+  @include respond(phone) {
+    grid-template-areas:
+      "a a"
+      "d d"
+      "b c";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
   @include respond(tab-port) {
-    grid-template-columns: auto auto;
+    grid-template-areas:
+      "a b"
+      "d c";
   }
 }

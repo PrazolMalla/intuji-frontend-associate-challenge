@@ -3,9 +3,16 @@
     padding: 1rem;
     background-color: $color-white;
     border-radius: 14px;
+    max-width: 450px;
     width: 100%;
+
     @include flexbox(start, start, 24px, column);
-    @include respond(tab-port) {
+
+    @include respond(phone) {
+      max-width: 650px;
+      grid-area: a;
+    }
+    @include respond(tab-land) {
       max-width: 717px;
     }
   }
@@ -69,9 +76,12 @@
     }
     &-divider {
       min-height: 1px;
-      width: 293px;
+      width: 255px;
       opacity: 0.2;
       background-color: $color-blue;
+      @include respond(tab-land) {
+        width: 293px;
+      }
     }
     &-bottom {
       width: 100%;

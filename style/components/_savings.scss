@@ -1,13 +1,16 @@
 .savings {
   &__section {
     width: 100%;
-    max-width: 365px;
+    max-width: 355px;
     background-color: $color-white;
     padding: 1rem;
     @include flexbox(start, start, 24px, column);
     border-radius: 14px;
     @include respond(tab-port) {
       max-width: 350px;
+    }
+    @include respond(phone) {
+      grid-area: b;
     }
   }
   &__heading {

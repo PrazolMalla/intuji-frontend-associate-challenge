@@ -1,6 +1,9 @@
 .transaction {
   &__section {
     @extend .savings__section;
+    @include respond(phone) {
+      grid-area: c;
+    }
   }
   &__heading {
     @extend .savings__heading;
@@ -10,7 +13,8 @@
   }
   &__body {
     width: 100%;
-    @include flexbox(start, start, 25px, column);
+    height: 100%;
+    @include flexbox(space-between, start, 25px, column);
   }
   &__item {
     width: 100%;
@@ -24,6 +28,13 @@
     }
     &-left {
       @include flexbox(start, center, 8px);
+    }
+    &-text {
+      @include flexbox(start, start, 4px, column);
+    }
+
+    &-right {
+      @include flexbox(start, start, 4px, column);
     }
   }
 }
