@@ -325,6 +325,13 @@ body {
   align-items: center;
   gap: 0px;
 }
+.header__dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
 
 .btn {
   background-color: transparent;
@@ -379,28 +386,28 @@ body {
     grid-template-columns: auto auto;
   }
 }
-.overview__body {
+.overview__item-container {
   max-width: 333px;
   height: 165.5px;
   padding: 1.25rem;
   border-radius: 14px;
   border: 1px solid rgba(222, 222, 222, 0.7);
 }
-.overview__body:hover {
+.overview__item-container:hover {
   background-color: #4745a4;
   color: white;
 }
-.overview__body:hover .overview__item-heading,
-.overview__body:hover .overview__item-money {
+.overview__item-container:hover .overview__item-heading,
+.overview__item-container:hover .overview__item-money {
   color: white;
 }
-.overview__body:hover .overview__item-subtext p {
+.overview__item-container:hover .overview__item-subtext p {
   color: rgba(255, 255, 255, 0.6);
 }
-.overview__body:hover .overview__item-divider {
+.overview__item-container:hover .overview__item-divider {
   background-color: #fff;
 }
-.overview__body:hover svg path {
+.overview__item-container:hover svg path {
   stroke: white;
 }
 .overview__item {
