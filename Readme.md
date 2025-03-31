@@ -44,7 +44,7 @@ finance-app/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/finance-app.git
+   git clone https://github.com/PrazolMalla/intuji-frontend-associate-challenge/blob/main/Readme.md
    ```
 2. Navigate to the project folder:
    ```bash
