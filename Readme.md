@@ -48,7 +48,7 @@ finance-app/
    ```
 2. Navigate to the project folder:
    ```bash
-   cd finance-app
+   cd intuji-frontend-associate-challenge
    ```
 3. Install dependencies (if using a package manager like npm for SASS compilation):
    ```bash
