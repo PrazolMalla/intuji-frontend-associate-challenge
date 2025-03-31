@@ -1,0 +1,29 @@
+.transaction {
+  &__section {
+    @extend .savings__section;
+  }
+  &__heading {
+    @extend .savings__heading;
+  }
+  &__divider {
+    @extend .savings__divider;
+  }
+  &__body {
+    width: 100%;
+    @include flexbox(start, start, 25px, column);
+  }
+  &__item {
+    width: 100%;
+    @include flexbox(space-between);
+    &-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: rgba(17, 17, 17, 0.2);
+      @include flexbox(center, center);
+    }
+    &-left {
+      @include flexbox(start, center, 8px);
+    }
+  }
+}
